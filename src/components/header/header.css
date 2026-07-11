@@ -6,3 +6,35 @@
   color: #fde68a;
   font-weight: 700;
 }
+
+.site-header .dropdown-menu {
+  border: 1px solid var(--app-border);
+  background: rgba(8, 15, 29, 0.98);
+  box-shadow: var(--app-shadow);
+}
+
+.site-header .dropdown-item {
+  color: #e5eefb;
+}
+
+.site-header .dropdown-item:hover,
+.site-header .dropdown-item:focus {
+  background: rgba(250, 204, 21, 0.14);
+  color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .site-header .navbar-nav {
+    padding-top: 0.75rem;
+  }
+
+  .site-header .dropdown-menu {
+    background: rgba(6, 12, 24, 0.98);
+    margin-top: 0.35rem;
+  }
+
+  .site-header .dropdown-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
