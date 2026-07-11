@@ -1,0 +1,22 @@
+.page-card {
+  border-radius: 1.5rem;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+  box-shadow: var(--app-shadow);
+}
+
+.create-team-notes {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.create-team-notes li {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  color: #dbeafe;
+}
+
+.create-team-notes i {
+  margin-top: 0.2rem;
+}

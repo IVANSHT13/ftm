@@ -15,6 +15,10 @@ const routes = [
     load: () => import('./pages/dashboard/dashboard.js'),
   },
   {
+    path: /^\/create-team\/?$/,
+    load: () => import('./pages/create-team/create-team.js'),
+  },
+  {
     path: /^\/live-scores\/?$/,
     load: () => import('./pages/live-scores/live-scores.js'),
   },
