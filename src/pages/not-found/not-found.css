@@ -1,0 +1,6 @@
+.page-card {
+  border-radius: 1.5rem;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+  box-shadow: var(--app-shadow);
+}

@@ -1,0 +1,8 @@
+.site-header {
+  position: relative;
+}
+
+.site-header .nav-link.active {
+  color: #fde68a;
+  font-weight: 700;
+}

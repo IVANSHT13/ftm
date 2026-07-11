@@ -1,0 +1,59 @@
+<section class="page-card p-4 p-lg-5">
+  <div class="row g-4 align-items-center mb-4">
+    <div class="col-lg-8">
+      <div class="eyebrow mb-3"><i class="bi bi-clipboard-data-fill"></i> Match records</div>
+      <h1 class="page-title mb-3">Score Sheet <span class="sheet-id">#{{id}}</span></h1>
+      <p class="lead fs-5 hero-copy">Review match details, goals, cards, and official notes for the selected fixture.</p>
+    </div>
+    <div class="col-lg-4 text-lg-end">
+      <a class="btn btn-outline-soft btn-lg px-4" href="/dashboard" data-link="true">Back to dashboard</a>
+    </div>
+  </div>
+
+  <div class="scoreboard p-4 p-lg-5 mb-4">
+    <div class="row align-items-center g-4 text-center">
+      <div class="col-md-5">
+        <div class="team-name">Riverside FC</div>
+        <div class="team-meta">Home side</div>
+      </div>
+      <div class="col-md-2">
+        <div class="score-badge">2 - 1</div>
+        <div class="team-meta mt-2">Final</div>
+      </div>
+      <div class="col-md-5">
+        <div class="team-name">City Rangers</div>
+        <div class="team-meta">Away side</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div class="screen-card p-4 h-100">
+        <h2 class="h4 mb-3">Match events</h2>
+        <div class="table-responsive">
+          <table class="table table-dark-soft align-middle mb-0">
+            <thead>
+              <tr><th>Minute</th><th>Type</th><th>Detail</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>12'</td><td>Goal</td><td>Riverside FC - A. Markov</td></tr>
+              <tr><td>55'</td><td>Goal</td><td>City Rangers - J. Cole</td></tr>
+              <tr><td>81'</td><td>Goal</td><td>Riverside FC - D. Petrov</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="status-card p-4 h-100">
+        <h2 class="h4 mb-3">Official notes</h2>
+        <ul class="list-unstyled mb-0 notes-list">
+          <li><i class="bi bi-check2-circle text-success"></i> Match verified by referee crew.</li>
+          <li><i class="bi bi-check2-circle text-success"></i> Result synced to league standings.</li>
+          <li><i class="bi bi-check2-circle text-success"></i> Discipline records archived for review.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

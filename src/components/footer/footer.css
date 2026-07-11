@@ -1,0 +1,15 @@
+.site-footer a {
+  color: #dbeafe;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: white;
+}
+
+.footer-card {
+  border-radius: 1.25rem;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+  box-shadow: var(--app-shadow);
+}
