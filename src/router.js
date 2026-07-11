@@ -19,6 +19,10 @@ const routes = [
     load: () => import('./pages/live-scores/live-scores.js'),
   },
   {
+    path: /^\/schedule\/?$/,
+    load: () => import('./pages/schedule/schedule.js'),
+  },
+  {
     path: /^\/scoresheet\/([^/]+)\/?$/,
     load: () => import('./pages/scoresheet/scoresheet.js'),
   },
