@@ -27,6 +27,10 @@ const routes = [
     load: () => import('./pages/statistics/statistics.js'),
   },
   {
+    path: /^\/teams\/?$/,
+    load: () => import('./pages/teams/teams.js'),
+  },
+  {
     path: /^\/schedule\/?$/,
     load: () => import('./pages/schedule/schedule.js'),
   },
