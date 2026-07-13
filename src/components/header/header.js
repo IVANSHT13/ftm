@@ -8,7 +8,7 @@ function parseTemplate(template) {
 export function renderHeader(pathname) {
   const documentFragment = parseTemplate(headerTemplate);
   const links = documentFragment.querySelectorAll('[data-route]');
-  const dropdownToggles = documentFragment.querySelectorAll('.dropdown-toggle[data-route]');
+  const dropdowns = documentFragment.querySelectorAll('.nav-item.dropdown');
 
   links.forEach((link) => {
     const route = link.getAttribute('data-route');
@@ -20,11 +20,11 @@ export function renderHeader(pathname) {
     }
   });
 
-  dropdownToggles.forEach((toggle) => {
-    const route = toggle.getAttribute('data-route');
-    const isActive = route === '/scoresheet' ? pathname.startsWith('/scoresheet') : route === pathname;
+  dropdowns.forEach((dropdown) => {
+    const hasActiveItem = dropdown.querySelector('.dropdown-item.active');
 
-    if (isActive) {
+    if (hasActiveItem) {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
       toggle.classList.add('active');
       toggle.setAttribute('aria-current', 'page');
     }
