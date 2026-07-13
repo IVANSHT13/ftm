@@ -1,8 +1,10 @@
+<div class="home-page">
+
 <section class="hero-card p-4 p-md-5 mb-4 mb-lg-5">
   <div class="row align-items-center g-4">
     <div class="col-lg-7">
       <div class="eyebrow mb-3"><i class="bi bi-dribbble"></i> 9-a-side football tournament</div>
-      <h1 class="display-title mb-3">Play competitive football with your team and your best friends.</h1>
+      <h1 class="display-title mb-3">Play competitive football with your team and your <span class="word-gradient">best friends</span>.</h1>
       <p class="lead fs-5 mb-4 hero-copy">
         Pro League is a 9-a-side football tournament where everyone can join with their team, compete in fair matches, and have fun playing the game you love.
       </p>
@@ -24,7 +26,7 @@
             <div class="muted-label">Tournament style</div>
             <h2 class="h4 mb-0">9-a-side league format</h2>
           </div>
-          <span class="badge rounded-pill text-bg-success-subtle text-success-emphasis px-3 py-2">Live</span>
+          <span class="badge rounded-pill text-bg-success-subtle text-success-emphasis px-3 py-2 live-badge"><span class="live-dot"></span>Live</span>
         </div>
         <div class="divider my-3"></div>
         <div class="pitch-panel">
@@ -40,6 +42,78 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="ticker-band mb-4 mb-lg-5" aria-hidden="true">
+  <div class="ticker-track">
+    <span><i class="bi bi-trophy-fill"></i> Open registration</span>
+    <span><i class="bi bi-people-fill"></i> 9 v 9 format</span>
+    <span><i class="bi bi-broadcast"></i> Live scoring</span>
+    <span><i class="bi bi-shield-check"></i> Fair play, every match</span>
+    <span><i class="bi bi-calendar2-week-fill"></i> Matchday energy</span>
+    <span><i class="bi bi-controller"></i> Bring your squad</span>
+    <span><i class="bi bi-trophy-fill"></i> Open registration</span>
+    <span><i class="bi bi-people-fill"></i> 9 v 9 format</span>
+    <span><i class="bi bi-broadcast"></i> Live scoring</span>
+    <span><i class="bi bi-shield-check"></i> Fair play, every match</span>
+    <span><i class="bi bi-calendar2-week-fill"></i> Matchday energy</span>
+    <span><i class="bi bi-controller"></i> Bring your squad</span>
+  </div>
+</section>
+
+<section class="row g-4 mb-4 mb-lg-5">
+  <div class="col-6 col-lg-3">
+    <div class="stat-tile p-4 h-100">
+      <div class="feature-icon mb-3"><i class="bi bi-people-fill"></i></div>
+      <div class="stat-number">9 v 9</div>
+      <div class="text-body-secondary small">Players a side, built for tight team play</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="stat-tile p-4 h-100">
+      <div class="feature-icon mb-3"><i class="bi bi-door-open-fill"></i></div>
+      <div class="stat-number">Open</div>
+      <div class="text-body-secondary small">Entry for every team that wants to compete</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="stat-tile p-4 h-100">
+      <div class="feature-icon mb-3"><i class="bi bi-broadcast-pin"></i></div>
+      <div class="stat-number">Live</div>
+      <div class="text-body-secondary small">Score updates as the action happens</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="stat-tile p-4 h-100">
+      <div class="feature-icon mb-3"><i class="bi bi-trophy-fill"></i></div>
+      <div class="stat-number">Season</div>
+      <div class="text-body-secondary small">Long league with standings that matter</div>
+    </div>
+  </div>
+</section>
+
+<section class="mb-4 mb-lg-5">
+  <div class="mb-4">
+    <div class="muted-label">How it works</div>
+    <h2 class="h3 mb-0">From sign-up to the final whistle</h2>
+  </div>
+  <div class="timeline row g-4 g-lg-0">
+    <div class="col-lg-4 timeline-step">
+      <div class="timeline-marker">1</div>
+      <h3 class="h5 mt-3">Create your team</h3>
+      <p class="text-body-secondary mb-0">Register your squad, lock in your roster, and set up your team profile in minutes.</p>
+    </div>
+    <div class="col-lg-4 timeline-step">
+      <div class="timeline-marker">2</div>
+      <h3 class="h5 mt-3">Compete matchday to matchday</h3>
+      <p class="text-body-secondary mb-0">Play scheduled fixtures against other clubs in fair, competitive 9-a-side matches.</p>
+    </div>
+    <div class="col-lg-4 timeline-step">
+      <div class="timeline-marker">3</div>
+      <h3 class="h5 mt-3">Track the table</h3>
+      <p class="text-body-secondary mb-0">Follow live scores, standings, and stats as your team climbs the league.</p>
     </div>
   </div>
 </section>
@@ -79,31 +153,24 @@
     </div>
     <p class="text-body-secondary mb-0">Each screen is a separate physical HTML file, following the MPA rule.</p>
   </div>
-  <div class="row g-4">
-    <div class="col-md-6 col-xl-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-broadcast-pin"></i></div><h3 class="h5"><a class="screen-link" href="/live-scores" data-link="true">Live Scores</a></h3><p class="text-body-secondary mb-0">Follow matches in progress with live score updates and key events.</p></article></div>
-    <div class="col-md-6 col-xl-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-calendar3"></i></div><h3 class="h5"><a class="screen-link" href="/schedule" data-link="true">Schedule</a></h3><p class="text-body-secondary mb-0">Check upcoming fixtures, dates, venues, and matchday order.</p></article></div>
-    <div class="col-md-6 col-xl-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-person-plus-fill"></i></div><h3 class="h5"><a class="screen-link" href="/create-team" data-link="true">Create Team</a></h3><p class="text-body-secondary mb-0">Register a new club, squad, and team profile for the tournament.</p></article></div>
-    <div class="col-md-6 col-xl-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-calendar2-week-fill"></i></div><h3 class="h5"><a class="screen-link" href="/scoresheet/24" data-link="true">Score Sheet</a></h3><p class="text-body-secondary mb-0">Open a live scoresheet, track events, and review match details.</p></article></div>
-    <div class="col-md-6 col-xl-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-bar-chart-fill"></i></div><h3 class="h5"><a class="screen-link" href="/dashboard" data-link="true">Dashboard</a></h3><p class="text-body-secondary mb-0">Track table positions, fixtures, and admin actions in one hub.</p></article></div>
-    <div class="col-md-6 col-xl-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-gear-fill"></i></div><h3 class="h5"><a class="screen-link" href="/dashboard" data-link="true">Management</a></h3><p class="text-body-secondary mb-0">Organize clubs, match operations, and season settings.</p></article></div>
+  <div class="row g-4 bento-grid">
+    <div class="col-lg-6"><article class="screen-card screen-card-feature p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-bar-chart-fill"></i></div><h3 class="h4"><a class="screen-link" href="/dashboard" data-link="true">Dashboard</a></h3><p class="text-body-secondary mb-0">Track table positions, fixtures, and admin actions in one hub — the command center for your season.</p></article></div>
+    <div class="col-md-6 col-lg-3"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-broadcast-pin"></i></div><h3 class="h5"><a class="screen-link" href="/live-scores" data-link="true">Live Scores</a></h3><p class="text-body-secondary mb-0">Follow matches in progress with live score updates and key events.</p></article></div>
+    <div class="col-md-6 col-lg-3"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-calendar3"></i></div><h3 class="h5"><a class="screen-link" href="/schedule" data-link="true">Schedule</a></h3><p class="text-body-secondary mb-0">Check upcoming fixtures, dates, venues, and matchday order.</p></article></div>
+    <div class="col-md-6 col-lg-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-person-plus-fill"></i></div><h3 class="h5"><a class="screen-link" href="/create-team" data-link="true">Create Team</a></h3><p class="text-body-secondary mb-0">Register a new club, squad, and team profile for the tournament.</p></article></div>
+    <div class="col-md-6 col-lg-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-calendar2-week-fill"></i></div><h3 class="h5"><a class="screen-link" href="/scoresheet/24" data-link="true">Score Sheet</a></h3><p class="text-body-secondary mb-0">Open a live scoresheet, track events, and review match details.</p></article></div>
+    <div class="col-md-6 col-lg-4"><article class="screen-card p-4 h-100"><div class="screen-icon mb-3"><i class="bi bi-gear-fill"></i></div><h3 class="h5"><a class="screen-link" href="/dashboard" data-link="true">Management</a></h3><p class="text-body-secondary mb-0">Organize clubs, match operations, and season settings.</p></article></div>
   </div>
 </section>
 
-<section class="row g-4 mb-4 mb-lg-5">
-  <div class="col-lg-8">
-    <div class="feature-card p-4 h-100">
-      <div class="muted-label mb-2">Pro League promise</div>
-      <h2 class="h3">Built for teams that want competition and fun</h2>
-      <p class="text-body-secondary mb-0">
-        Pro League is the place to gather your friends, join with your team, and enjoy a 9-a-side football tournament where competitive play and good times go together.
-      </p>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="status-card p-4 h-100 text-center">
-      <div class="muted-label mb-2">League brand</div>
-      <div class="display-6 fw-bold mb-2">Pro League</div>
-      <div class="text-body-secondary">9-a-side football tournament for everyone</div>
-    </div>
+<section class="cta-banner p-4 p-md-5 text-center">
+  <div class="muted-label mb-2">Ready when you are</div>
+  <h2 class="page-title mb-3">Gather your squad. Join the league.</h2>
+  <p class="text-body-secondary mb-4 mx-auto cta-copy">Pro League is the place to bring your friends together, compete in a 9-a-side football tournament, and enjoy every matchday.</p>
+  <div class="d-flex flex-wrap gap-3 justify-content-center">
+    <a class="btn btn-accent btn-lg px-4" href="/create-team" data-link="true">Create your team</a>
+    <a class="btn btn-outline-soft btn-lg px-4" href="/dashboard" data-link="true">Explore the dashboard</a>
   </div>
 </section>
+
+</div>
