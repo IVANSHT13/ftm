@@ -23,6 +23,10 @@ const routes = [
     load: () => import('./pages/live-scores/live-scores.js'),
   },
   {
+    path: /^\/statistics\/?$/,
+    load: () => import('./pages/statistics/statistics.js'),
+  },
+  {
     path: /^\/schedule\/?$/,
     load: () => import('./pages/schedule/schedule.js'),
   },
