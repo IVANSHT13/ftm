@@ -32,26 +32,43 @@
               <li><a class="dropdown-item" href="/statistics#clean-sheets" data-link="true" data-route="/statistics">Clean Sheets</a></li>
             </ul>
           </li>
-          <li class="nav-item nav-group dropdown">
+          <li class="nav-item nav-group dropdown" data-auth-state="authenticated" data-roles="manager admin">
             <a class="nav-link nav-group-link" href="/create-team" data-link="true" data-route="/create-team">Operations</a>
             <button class="nav-link nav-dropdown-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open Operations menu"></button>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="/create-team" data-link="true" data-route="/create-team">Create Team</a></li>
+              <li data-auth-state="authenticated" data-roles="manager admin"><a class="dropdown-item" href="/create-team" data-link="true" data-route="/create-team">Create Team</a></li>
+              <li data-auth-state="authenticated" data-roles="manager admin"><a class="dropdown-item" href="/register-player" data-link="true" data-route="/register-player">Register Player</a></li>
+              <li data-auth-state="authenticated" data-roles="manager admin"><a class="dropdown-item" href="/transfers" data-link="true" data-route="/transfers">Transfers</a></li>
               <li><a class="dropdown-item" href="/schedule" data-link="true" data-route="/schedule">Schedule</a></li>
               <li><a class="dropdown-item" href="/scoresheet/24" data-link="true" data-route="/scoresheet">Score Sheet</a></li>
             </ul>
           </li>
+          <li class="nav-item" data-auth-state="authenticated">
+            <a class="nav-link" href="/dashboard" data-link="true" data-route="/dashboard" data-role-target="true">My Area</a>
+          </li>
+          <li class="nav-item" data-auth-state="authenticated" data-roles="admin"><a class="nav-link" href="/admin" data-link="true" data-route="/admin">Admin</a></li>
           <li class="nav-item nav-group dropdown">
             <a class="nav-link nav-group-link" href="/login" data-link="true" data-route="/login">Account</a>
             <button class="nav-link nav-dropdown-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open Account menu"></button>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="/player-login" data-link="true" data-route="/player-login">Player Log In</a></li>
-              <li><a class="dropdown-item" href="/login" data-link="true" data-route="/login">Manager Log In</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><button class="dropdown-item" type="button" data-auth-logout="true">Logout</button></li>
+              <li data-auth-state="guest"><a class="dropdown-item" href="/player-login" data-link="true" data-route="/player-login">Player Log In</a></li>
+              <li data-auth-state="guest"><a class="dropdown-item" href="/login" data-link="true" data-route="/login">Manager Log In</a></li>
+              <li data-auth-state="guest"><a class="dropdown-item" href="/admin" data-link="true" data-route="/admin">Admin Log In</a></li>
+              <li class="dropdown-divider" data-auth-state="authenticated"></li>
+              <li data-auth-state="authenticated" data-roles="player manager admin"><a class="dropdown-item" href="/dashboard" data-link="true" data-route="/dashboard">Dashboard</a></li>
+              <li data-auth-state="authenticated" data-roles="manager admin"><a class="dropdown-item" href="/create-team" data-link="true" data-route="/create-team">Create Team</a></li>
+              <li data-auth-state="authenticated" data-roles="manager admin"><a class="dropdown-item" href="/register-player" data-link="true" data-route="/register-player">Register Player</a></li>
+              <li data-auth-state="authenticated" data-roles="manager admin"><a class="dropdown-item" href="/transfers" data-link="true" data-route="/transfers">Transfers</a></li>
+              <li data-auth-state="authenticated" data-roles="admin"><a class="dropdown-item" href="/admin" data-link="true" data-route="/admin">Admin Panel</a></li>
+              <li data-auth-state="authenticated"><hr class="dropdown-divider"></li>
+              <li data-auth-state="authenticated"><button class="dropdown-item" type="button" data-auth-logout="true">Sign out</button></li>
             </ul>
           </li>
         </ul>
+        <div class="nav-session d-none ms-lg-3" data-auth-state="authenticated">
+          <span class="badge text-bg-light text-dark me-2" data-role-badge></span>
+          <button class="btn btn-outline-soft btn-sm" type="button" data-auth-logout="true">Sign out</button>
+        </div>
       </div>
     </div>
   </nav>

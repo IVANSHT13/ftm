@@ -1,6 +1,6 @@
 import loginTemplate from './login.html?raw';
 import './login.css';
-import { getCurrentSession, isSupabaseConfigured, signInWithEmail, signUpWithEmail } from '../../services/auth.js';
+import { getCurrentSession, getCurrentUserProfile, isSupabaseConfigured, signInWithEmail, signUpWithEmail } from '../../services/auth.js';
 import { navigateTo } from '../../router.js';
 
 export const title = 'Pro League | Login';
@@ -26,6 +26,21 @@ function setBusy(buttons, isBusy) {
   });
 }
 
+function routeByRole(role) {
+  if (role === 'admin') {
+    return '/admin';
+  }
+
+  return '/dashboard';
+}
+
+async function getLandingRoute(session) {
+  const profile = await getCurrentUserProfile(session.user.id).catch(() => null);
+  const role = profile?.role || session.user.user_metadata?.role || 'player';
+
+  return routeByRole(role);
+}
+
 async function handleLoginSubmit(event, statusElement, submitButton) {
   event.preventDefault();
   clearStatus(statusElement);
@@ -43,8 +58,9 @@ async function handleLoginSubmit(event, statusElement, submitButton) {
   setBusy([submitButton], true);
 
   try {
-    await signInWithEmail(email, password);
-    navigateTo('/dashboard');
+    const session = await signInWithEmail(email, password);
+    const landingRoute = session ? await getLandingRoute(session) : '/dashboard';
+    navigateTo(landingRoute);
   } catch (error) {
     showStatus(statusElement, error.message || 'Unable to sign in right now.', 'danger');
   } finally {
@@ -74,7 +90,7 @@ async function handleRegisterSubmit(event, statusElement, submitButton) {
     const session = await signUpWithEmail({ fullName, email, password, role });
 
     if (session) {
-      navigateTo('/dashboard');
+      navigateTo(routeByRole(role));
       return;
     }
 
@@ -98,7 +114,7 @@ export async function mount(root) {
 
   const session = await getCurrentSession();
   if (session) {
-    navigateTo('/dashboard');
+    navigateTo(await getLandingRoute(session));
     return;
   }
 

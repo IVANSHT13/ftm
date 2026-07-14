@@ -3,20 +3,20 @@
     <div>
       <div class="eyebrow mb-3"><i class="bi bi-bar-chart-fill"></i> Operations hub</div>
       <h1 class="page-title mb-3">Dashboard</h1>
-      <p class="lead fs-5 hero-copy">Monitor the tournament from one control center with results, fixtures, clubs, and admin tools.</p>
+      <p class="lead fs-5 hero-copy" id="dashboardLead">Monitor the tournament from one control center with results, fixtures, clubs, and admin tools.</p>
     </div>
     <a class="btn btn-outline-soft btn-lg px-4" href="/scoresheet/24" data-link="true">Open scoresheet</a>
   </div>
 
   <div class="row g-4 mb-4">
-    <div class="col-md-6 col-xl-3"><div class="metric-card p-4 h-100"><div class="muted-label">Clubs</div><div class="display-6 fw-bold mb-2">18</div><div class="text-body-secondary">Active registered teams this season.</div></div></div>
-    <div class="col-md-6 col-xl-3"><div class="metric-card p-4 h-100"><div class="muted-label">Fixtures</div><div class="display-6 fw-bold mb-2">48</div><div class="text-body-secondary">Scheduled and completed matches.</div></div></div>
-    <div class="col-md-6 col-xl-3"><div class="metric-card p-4 h-100"><div class="muted-label">Admins</div><div class="display-6 fw-bold mb-2">6</div><div class="text-body-secondary">Authorized league staff users.</div></div></div>
-    <div class="col-md-6 col-xl-3"><div class="metric-card p-4 h-100"><div class="muted-label">Reports</div><div class="display-6 fw-bold mb-2">12</div><div class="text-body-secondary">Submitted match reports and logs.</div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="metric-card p-4 h-100"><div class="muted-label">Clubs</div><div class="display-6 fw-bold mb-2" id="dashboardClubs">18</div><div class="text-body-secondary">Active registered teams this season.</div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="metric-card p-4 h-100"><div class="muted-label">Fixtures</div><div class="display-6 fw-bold mb-2" id="dashboardFixtures">48</div><div class="text-body-secondary">Scheduled and completed matches.</div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="metric-card p-4 h-100"><div class="muted-label">Admins</div><div class="display-6 fw-bold mb-2" id="dashboardAdmins">6</div><div class="text-body-secondary">Authorized league staff users.</div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="metric-card p-4 h-100"><div class="muted-label">Reports</div><div class="display-6 fw-bold mb-2" id="dashboardReports">12</div><div class="text-body-secondary">Submitted match reports and logs.</div></div></div>
   </div>
 
   <div class="row g-4">
-    <div class="col-lg-7">
+    <div class="col-lg-7" id="dashboardMatchesColumn">
       <div class="screen-card p-4 h-100">
         <div class="d-flex align-items-center justify-content-between mb-3">
           <h2 class="h4 mb-0">Recent matches</h2>
@@ -36,8 +36,8 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-5">
-      <div class="status-card p-4 h-100">
+    <div class="col-lg-5" id="dashboardActionsColumn">
+      <div class="status-card p-4 h-100" id="dashboardActionsCard">
         <div class="muted-label mb-2">Admin actions</div>
         <h2 class="h4 mb-3">Season controls</h2>
         <div class="d-grid gap-3">

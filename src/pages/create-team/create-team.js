@@ -48,6 +48,11 @@ export async function mount(root) {
   }
 
   const profile = await getCurrentUserProfile(session.user.id);
+  if (profile?.role === 'player') {
+    navigateTo('/dashboard');
+    return;
+  }
+
   const managerNameInput = form.querySelector('[name="managerName"]');
   const managerEmailInput = form.querySelector('[name="managerEmail"]');
 
@@ -60,7 +65,7 @@ export async function mount(root) {
   }
 
   if (profile?.role && !['manager', 'admin'].includes(profile.role)) {
-    showStatus(statusElement, 'This account is registered as a player, but the team can still be created from the account session.', 'warning');
+    showStatus(statusElement, 'This page is available to manager and admin accounts only.', 'warning');
   }
 
   form.addEventListener('submit', async (event) => {
