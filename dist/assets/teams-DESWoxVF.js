@@ -1,4 +1,4 @@
-import{a as e,i as t}from"./index-CaJ4cFz1.js";var n=`<section class="page-card p-4 p-lg-5">\r
+import{a as e,i as t}from"./index-tu5lXcoU.js";var n=`<section class="page-card p-4 p-lg-5">\r
   <div class="row g-4 align-items-center mb-4">\r
     <div class="col-lg-8">\r
       <div class="eyebrow mb-3"><i class="bi bi-people-fill"></i> Tournament teams</div>\r

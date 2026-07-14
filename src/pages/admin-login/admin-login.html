@@ -4,30 +4,35 @@
       <div class="eyebrow mb-3"><i class="bi bi-shield-lock-fill"></i> Administrator access</div>
       <h1 class="page-title mb-3">Admin Log In</h1>
       <p class="lead fs-5 hero-copy">
-        Site administrators can sign in to oversee the whole Pro League platform, including managers, players, and system settings.
+        Administrators sign in here to manage platform settings, user access, and league operations.
       </p>
       <div class="stack-list mt-4">
-        <div class="stack-item"><i class="bi bi-diagram-3-fill"></i> Full platform oversight</div>
-        <div class="stack-item"><i class="bi bi-people-fill"></i> Manage manager and player accounts</div>
-        <div class="stack-item"><i class="bi bi-gear-fill"></i> System configuration and security</div>
+        <div class="stack-item"><i class="bi bi-diagram-3-fill"></i> Platform oversight and security</div>
+        <div class="stack-item"><i class="bi bi-people-fill"></i> Review manager and player accounts</div>
+        <div class="stack-item"><i class="bi bi-gear-fill"></i> Open the protected admin console after sign in</div>
       </div>
     </div>
     <div class="col-lg-7">
-      <div class="auth-panel p-4 p-md-5">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label">Email</label>
-            <input class="form-control form-control-lg" type="email" placeholder="admin@proleague.com">
+      <div class="auth-panel auth-panel-admin p-4 p-md-5">
+        <div id="adminAuthStatus" class="alert mb-4 d-none" role="alert"></div>
+        <div class="admin-chip mb-4">
+          <i class="bi bi-lock-fill"></i>
+          Admin credentials required
+        </div>
+        <form id="adminLoginForm" class="row g-3" novalidate>
+          <div class="col-12">
+            <label class="form-label" for="adminEmail">Email</label>
+            <input class="form-control form-control-lg" id="adminEmail" name="email" type="email" placeholder="admin.test@proleague.test" autocomplete="email" required>
           </div>
-          <div class="col-md-6">
-            <label class="form-label">Password</label>
-            <input class="form-control form-control-lg" type="password" placeholder="••••••••">
+          <div class="col-12">
+            <label class="form-label" for="adminPassword">Password</label>
+            <input class="form-control form-control-lg" id="adminPassword" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required>
           </div>
           <div class="col-12 d-flex flex-wrap gap-3 align-items-center mt-2">
-            <button class="btn btn-accent btn-lg px-4" type="button">Sign in</button>
+            <button class="btn btn-accent btn-lg px-4" id="adminLoginButton" type="submit">Sign in as admin</button>
             <a class="btn btn-outline-soft btn-lg px-4" href="/dashboard" data-link="true">Go to dashboard</a>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

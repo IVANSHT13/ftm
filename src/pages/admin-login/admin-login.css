@@ -4,6 +4,25 @@
   background: rgba(8, 15, 29, 0.7);
 }
 
+.auth-panel-admin {
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.16), transparent 32%),
+    linear-gradient(180deg, rgba(8, 15, 29, 0.96), rgba(8, 15, 29, 0.82));
+}
+
+.admin-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.14);
+  border: 1px solid rgba(250, 204, 21, 0.2);
+  color: #fde68a;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 .stack-list {
   display: grid;
   gap: 0.75rem;
