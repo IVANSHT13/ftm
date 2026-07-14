@@ -13,3 +13,24 @@
 .create-team-notes i {
   margin-top: 0.2rem;
 }
+
+.screen-card .alert {
+  border-radius: 0.9rem;
+}
+
+.screen-card .form-control,
+.screen-card .form-select {
+  background: rgba(10, 17, 31, 0.95);
+  border-color: rgba(148, 163, 184, 0.18);
+  color: #f8fafc;
+}
+
+.screen-card .form-control::placeholder {
+  color: #64748b;
+}
+
+.screen-card .form-control:focus,
+.screen-card .form-select:focus {
+  border-color: rgba(250, 204, 21, 0.55);
+  box-shadow: 0 0 0 0.2rem rgba(250, 204, 21, 0.12);
+}

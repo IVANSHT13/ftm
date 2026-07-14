@@ -1,4 +1,4 @@
-import{t as e}from"./index-DZoVOHG7.js";var t=`<section class="page-card p-4 p-lg-5">
+import{t as e}from"./index-DKsX7h3a.js";var t=`<section class="page-card p-4 p-lg-5">
   <div class="row g-4 align-items-center">
     <div class="col-lg-5">
       <div class="eyebrow mb-3"><i class="bi bi-shield-lock-fill"></i> Administrator access</div>

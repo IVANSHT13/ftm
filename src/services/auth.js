@@ -5,7 +5,7 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 let supabaseClient;
 
-function getSupabaseClient() {
+export function getSupabaseClient() {
   if (!supabaseUrl || !supabaseAnonKey) {
     throw new Error('Supabase is not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.');
   }
@@ -33,6 +33,24 @@ export async function getCurrentSession() {
   }
 
   return data.session;
+}
+
+export async function getCurrentUserProfile(userId) {
+  if (!isSupabaseConfigured() || !userId) {
+    return null;
+  }
+
+  const { data, error } = await getSupabaseClient()
+    .from('users')
+    .select('id, full_name, role')
+    .eq('id', userId)
+    .maybeSingle();
+
+  if (error) {
+    throw error;
+  }
+
+  return data;
 }
 
 export async function signInWithEmail(email, password) {
