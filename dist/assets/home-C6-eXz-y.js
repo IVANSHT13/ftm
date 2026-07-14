@@ -1,4 +1,4 @@
-<div class="home-page">
+var e=`Pro League | Home`;function t(){return`<div class="home-page">
 
 <section class="hero-card p-4 p-md-5 mb-4 mb-lg-5">
   <div class="row align-items-center g-4">
@@ -174,3 +174,4 @@
 </section>
 
 </div>
+`}export{t as render,e as title};

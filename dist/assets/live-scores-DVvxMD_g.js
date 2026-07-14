@@ -39,7 +39,7 @@ var e=`Pro League | Live Scores`;function t(){return`<section class="page-card p
       <div class="screen-card p-4 h-100">\r
         <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">\r
           <h2 class="h4 mb-0">Matches in progress</h2>\r
-          <span class="badge text-bg-danger px-3 py-2">Live now</span>\r
+          <span class="badge text-bg-danger px-3 py-2 live-badge"><span class="live-dot"></span>Live now</span>\r
         </div>\r
         <div class="table-responsive">\r
           <table class="table table-dark-soft align-middle mb-0">\r

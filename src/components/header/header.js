@@ -8,7 +8,7 @@ function parseTemplate(template) {
 export function renderHeader(pathname) {
   const documentFragment = parseTemplate(headerTemplate);
   const links = documentFragment.querySelectorAll('[data-route]');
-  const dropdowns = documentFragment.querySelectorAll('.nav-item.dropdown');
+  const navGroups = documentFragment.querySelectorAll('.nav-item.dropdown');
 
   links.forEach((link) => {
     const route = link.getAttribute('data-route');
@@ -20,11 +20,12 @@ export function renderHeader(pathname) {
     }
   });
 
-  dropdowns.forEach((dropdown) => {
-    const hasActiveItem = dropdown.querySelector('.dropdown-item.active');
+  navGroups.forEach((group) => {
+    const hasActiveItem = group.querySelector('.dropdown-item.active');
+    const activeTopLink = group.querySelector('.nav-link.active');
 
-    if (hasActiveItem) {
-      const toggle = dropdown.querySelector('.dropdown-toggle');
+    if (hasActiveItem && !activeTopLink) {
+      const toggle = group.querySelector('.nav-dropdown-toggle');
       toggle.classList.add('active');
       toggle.setAttribute('aria-current', 'page');
     }
