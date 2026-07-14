@@ -1,5 +1,6 @@
 import { renderHeader } from './components/header/header.js';
 import { renderFooter } from './components/footer/footer.js';
+import { signOutUser } from './services/auth.js';
 
 const routes = [
   {
@@ -83,6 +84,10 @@ async function renderRoute(root) {
     ${renderFooter()}
   `;
 
+  if (typeof pageModule.mount === 'function') {
+    await pageModule.mount(root, resolved.params);
+  }
+
   if (hash) {
     requestAnimationFrame(() => {
       const target = document.querySelector(hash);
@@ -101,6 +106,15 @@ function navigateTo(url) {
 
 function setupNavigation(root) {
   root.addEventListener('click', (event) => {
+    const logoutTrigger = event.target.closest('[data-auth-logout="true"]');
+    if (logoutTrigger) {
+      event.preventDefault();
+      signOutUser().catch(() => undefined).finally(() => {
+        navigateTo('/');
+      });
+      return;
+    }
+
     const link = event.target.closest('a[data-link="true"]');
 
     if (!link) {
