@@ -1,0 +1,28 @@
+.page-card {
+  border-radius: 1.5rem;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+  box-shadow: var(--app-shadow);
+}
+
+.auth-panel {
+  border-radius: 1.25rem;
+  border: 1px solid var(--app-border);
+  background: rgba(8, 15, 29, 0.7);
+}
+
+.stack-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.stack-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #dbeafe;
+}
+
+.stack-item i {
+  color: #fde68a;
+}
