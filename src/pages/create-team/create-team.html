@@ -14,41 +14,46 @@
     <div class="col-lg-7">
       <div class="screen-card p-4 h-100">
         <h2 class="h4 mb-3">New club details</h2>
-        <div class="row g-3">
+        <div id="createTeamStatus" class="alert mb-4 d-none" role="alert"></div>
+        <form id="createTeamForm" class="row g-3" novalidate>
           <div class="col-md-6">
-            <label class="form-label">Team name</label>
-            <input class="form-control form-control-lg" type="text" placeholder="Riverside FC">
+            <label class="form-label" for="teamName">Team name</label>
+            <input class="form-control form-control-lg" id="teamName" name="name" type="text" placeholder="Riverside FC" required>
           </div>
           <div class="col-md-6">
-            <label class="form-label">Short name</label>
-            <input class="form-control form-control-lg" type="text" placeholder="RIV">
+            <label class="form-label" for="teamShortName">Short name</label>
+            <input class="form-control form-control-lg" id="teamShortName" name="shortName" type="text" placeholder="RIV" maxlength="10" required>
           </div>
           <div class="col-md-6">
-            <label class="form-label">Manager</label>
-            <input class="form-control form-control-lg" type="text" placeholder="Manager name">
+            <label class="form-label" for="managerName">Manager</label>
+            <input class="form-control form-control-lg" id="managerName" name="managerName" type="text" placeholder="Manager name" required>
           </div>
           <div class="col-md-6">
-            <label class="form-label">Contact email</label>
-            <input class="form-control form-control-lg" type="email" placeholder="manager@club.com">
+            <label class="form-label" for="managerEmail">Contact email</label>
+            <input class="form-control form-control-lg" id="managerEmail" name="managerEmail" type="email" placeholder="manager@club.com" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="teamFoundedYear">Founded year</label>
+            <input class="form-control form-control-lg" id="teamFoundedYear" name="foundedYear" type="number" min="1800" max="2100" placeholder="2020">
           </div>
           <div class="col-12">
-            <label class="form-label">Team logo / badge</label>
-            <input class="form-control form-control-lg" type="file">
+            <label class="form-label" for="teamLogo">Team logo / badge</label>
+            <input class="form-control form-control-lg" id="teamLogo" name="logo" type="file" accept="image/*" required>
           </div>
           <div class="col-12">
-            <label class="form-label">Team photo</label>
-            <input class="form-control form-control-lg" type="file" accept="image/*">
+            <label class="form-label" for="teamPhoto">Team photo</label>
+            <input class="form-control form-control-lg" id="teamPhoto" name="photo" type="file" accept="image/*" required>
             <div class="form-text text-body-secondary">Upload a squad photo or promotional team image.</div>
           </div>
           <div class="col-12">
-            <label class="form-label">Description</label>
-            <textarea class="form-control" rows="4" placeholder="Add a short team summary, home ground, or notes."></textarea>
+            <label class="form-label" for="teamDescription">Description</label>
+            <textarea class="form-control" id="teamDescription" name="description" rows="4" placeholder="Add a short team summary, home ground, or notes."></textarea>
           </div>
           <div class="col-12 d-flex flex-wrap gap-3 mt-2">
-            <button class="btn btn-accent btn-lg px-4" type="button">Create team</button>
+            <button class="btn btn-accent btn-lg px-4" id="createTeamButton" type="submit">Create team</button>
             <a class="btn btn-outline-soft btn-lg px-4" href="/schedule" data-link="true">Go to schedule</a>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <div class="col-lg-5">

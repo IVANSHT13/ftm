@@ -1,5 +1,6 @@
 import { renderHeader } from './components/header/header.js';
 import { renderFooter } from './components/footer/footer.js';
+import { signOutUser } from './services/auth.js';
 
 const routes = [
   {
@@ -69,6 +70,7 @@ function normalizePath(pathname) {
 
 async function renderRoute(root) {
   const pathname = normalizePath(window.location.pathname);
+  const hash = window.location.hash;
   const resolved = resolveRoute(pathname);
   const pageModule = resolved.route ? await resolved.route.load() : await import('./pages/not-found/not-found.js');
   const pageHtml = pageModule.render(resolved.params);
@@ -81,15 +83,38 @@ async function renderRoute(root) {
     </main>
     ${renderFooter()}
   `;
+
+  if (typeof pageModule.mount === 'function') {
+    await pageModule.mount(root, resolved.params);
+  }
+
+  if (hash) {
+    requestAnimationFrame(() => {
+      const target = document.querySelector(hash);
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 }
 
-function navigateTo(pathname) {
-  history.pushState({}, '', pathname);
+function navigateTo(url) {
+  history.pushState({}, '', url);
   return renderRoute(document.querySelector('#app'));
 }
 
 function setupNavigation(root) {
   root.addEventListener('click', (event) => {
+    const logoutTrigger = event.target.closest('[data-auth-logout="true"]');
+    if (logoutTrigger) {
+      event.preventDefault();
+      signOutUser().catch(() => undefined).finally(() => {
+        navigateTo('/');
+      });
+      return;
+    }
+
     const link = event.target.closest('a[data-link="true"]');
 
     if (!link) {
@@ -102,7 +127,7 @@ function setupNavigation(root) {
     }
 
     event.preventDefault();
-    navigateTo(target.pathname);
+    navigateTo(`${target.pathname}${target.search}${target.hash}`);
   });
 
   window.addEventListener('popstate', () => {

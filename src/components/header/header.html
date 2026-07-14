@@ -11,20 +11,18 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="/" data-link="true" data-route="/">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Overview
-            </a>
+          <li class="nav-item nav-group dropdown">
+            <a class="nav-link nav-group-link" href="/dashboard" data-link="true" data-route="/dashboard">Overview</a>
+            <button class="nav-link nav-dropdown-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open Overview menu"></button>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="/dashboard" data-link="true" data-route="/dashboard">Dashboard</a></li>
               <li><a class="dropdown-item" href="/live-scores" data-link="true" data-route="/live-scores">Live Scores</a></li>
               <li><a class="dropdown-item" href="/teams" data-link="true" data-route="/teams">Teams</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Statistics
-            </a>
+          <li class="nav-item nav-group dropdown">
+            <a class="nav-link nav-group-link" href="/statistics" data-link="true" data-route="/statistics">Statistics</a>
+            <button class="nav-link nav-dropdown-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open Statistics menu"></button>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="/statistics#matches-played" data-link="true" data-route="/statistics">Matches Played</a></li>
               <li><a class="dropdown-item" href="/statistics#goalscorers" data-link="true" data-route="/statistics">Goalscorers</a></li>
@@ -34,23 +32,23 @@
               <li><a class="dropdown-item" href="/statistics#clean-sheets" data-link="true" data-route="/statistics">Clean Sheets</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Operations
-            </a>
+          <li class="nav-item nav-group dropdown">
+            <a class="nav-link nav-group-link" href="/create-team" data-link="true" data-route="/create-team">Operations</a>
+            <button class="nav-link nav-dropdown-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open Operations menu"></button>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="/create-team" data-link="true" data-route="/create-team">Create Team</a></li>
               <li><a class="dropdown-item" href="/schedule" data-link="true" data-route="/schedule">Schedule</a></li>
               <li><a class="dropdown-item" href="/scoresheet/24" data-link="true" data-route="/scoresheet">Score Sheet</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Account
-            </a>
+          <li class="nav-item nav-group dropdown">
+            <a class="nav-link nav-group-link" href="/login" data-link="true" data-route="/login">Account</a>
+            <button class="nav-link nav-dropdown-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open Account menu"></button>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="/player-login" data-link="true" data-route="/player-login">Player Log In</a></li>
               <li><a class="dropdown-item" href="/login" data-link="true" data-route="/login">Manager Log In</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="dropdown-item" type="button" data-auth-logout="true">Logout</button></li>
             </ul>
           </li>
         </ul>

@@ -2,30 +2,74 @@
   <div class="row g-4 align-items-center">
     <div class="col-lg-5">
       <div class="eyebrow mb-3"><i class="bi bi-person-vcard-fill"></i> Secure access</div>
-      <h1 class="page-title mb-3">Manager Log In</h1>
+      <h1 class="page-title mb-3">Login or Register</h1>
       <p class="lead fs-5 hero-copy">
-        Managers can sign in to handle tournament operations, review fixtures, and keep Pro League updates under control.
+        Use your Supabase Auth account to join the tournament platform, manage your team, and access the dashboard after sign in.
       </p>
       <div class="stack-list mt-4">
-        <div class="stack-item"><i class="bi bi-shield-lock-fill"></i> Role-based access for admins and staff</div>
-        <div class="stack-item"><i class="bi bi-cloud-check-fill"></i> Supabase Auth-ready flow</div>
-        <div class="stack-item"><i class="bi bi-people-fill"></i> Organizer and referee access paths</div>
+        <div class="stack-item"><i class="bi bi-shield-lock-fill"></i> Secure Supabase authentication</div>
+        <div class="stack-item"><i class="bi bi-person-plus-fill"></i> Create a new player or manager account</div>
+        <div class="stack-item"><i class="bi bi-box-arrow-right"></i> Logout always returns you to the home page</div>
       </div>
     </div>
     <div class="col-lg-7">
       <div class="auth-panel p-4 p-md-5">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label">Email</label>
-            <input class="form-control form-control-lg" type="email" placeholder="manager@proleague.com">
+        <div id="authStatus" class="alert mb-4 d-none" role="alert"></div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="auth-card p-4 h-100">
+              <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                <div>
+                  <div class="muted-label">Returning user</div>
+                  <h2 class="h4 mb-0">Sign In</h2>
+                </div>
+                <span class="badge text-bg-warning-subtle text-warning-emphasis">Dashboard access</span>
+              </div>
+              <form id="loginForm" class="d-grid gap-3" novalidate>
+                <div>
+                  <label class="form-label auth-form-label" for="loginEmail">Email</label>
+                  <input class="form-control form-control-lg" id="loginEmail" name="email" type="email" placeholder="manager@proleague.com" autocomplete="email" required>
+                </div>
+                <div>
+                  <label class="form-label auth-form-label" for="loginPassword">Password</label>
+                  <input class="form-control form-control-lg" id="loginPassword" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required>
+                </div>
+                <button class="btn btn-accent btn-lg px-4" id="loginButton" type="submit">Sign in</button>
+              </form>
+            </div>
           </div>
-          <div class="col-md-6">
-            <label class="form-label">Password</label>
-            <input class="form-control form-control-lg" type="password" placeholder="••••••••">
-          </div>
-          <div class="col-12 d-flex flex-wrap gap-3 align-items-center mt-2">
-            <button class="btn btn-accent btn-lg px-4" type="button">Sign in</button>
-            <a class="btn btn-outline-soft btn-lg px-4" href="/dashboard" data-link="true">Go to dashboard</a>
+          <div class="col-lg-6">
+            <div class="auth-card auth-card-accent p-4 h-100">
+              <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                <div>
+                  <div class="muted-label">New account</div>
+                  <h2 class="h4 mb-0">Register</h2>
+                </div>
+                <span class="badge text-bg-success-subtle text-success-emphasis">Create account</span>
+              </div>
+              <form id="registerForm" class="d-grid gap-3" novalidate>
+                <div>
+                  <label class="form-label auth-form-label" for="fullName">Full name</label>
+                  <input class="form-control form-control-lg" id="fullName" name="fullName" type="text" placeholder="Alex Petrov" autocomplete="name" required>
+                </div>
+                <div>
+                  <label class="form-label auth-form-label" for="registerRole">Role</label>
+                  <select class="form-select form-select-lg" id="registerRole" name="role" required>
+                    <option value="player" selected>Player</option>
+                    <option value="manager">Manager</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="form-label auth-form-label" for="registerEmail">Email</label>
+                  <input class="form-control form-control-lg" id="registerEmail" name="registerEmail" type="email" placeholder="player@proleague.com" autocomplete="email" required>
+                </div>
+                <div>
+                  <label class="form-label auth-form-label" for="registerPassword">Password</label>
+                  <input class="form-control form-control-lg" id="registerPassword" name="registerPassword" type="password" placeholder="Create a strong password" autocomplete="new-password" required>
+                </div>
+                <button class="btn btn-outline-soft btn-lg px-4" id="registerButton" type="submit">Create account</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
