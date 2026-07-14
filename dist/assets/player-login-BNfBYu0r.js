@@ -1,4 +1,4 @@
-import{t as e}from"./index-BzGzNCOl.js";var t=`<section class="page-card p-4 p-lg-5">
+import{t as e}from"./index-CaJ4cFz1.js";var t=`<section class="page-card p-4 p-lg-5">
   <div class="row g-4 align-items-center">
     <div class="col-lg-5">
       <div class="eyebrow mb-3"><i class="bi bi-person-badge-fill"></i> Player access</div>

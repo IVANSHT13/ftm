@@ -1,4 +1,4 @@
-import{a as e,n as t,r as n}from"./index-BzGzNCOl.js";var r=`<section class="page-card p-4 p-lg-5">\r
+import{a as e,n as t,r as n}from"./index-CaJ4cFz1.js";var r=`<section class="page-card p-4 p-lg-5">\r
   <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">\r
     <div>\r
       <div class="eyebrow mb-3"><i class="bi bi-bar-chart-fill"></i> Operations hub</div>\r

@@ -48,6 +48,10 @@ const routes = [
     load: () => import('./pages/statistics/statistics.js'),
   },
   {
+    path: /^\/news\/?$/,
+    load: () => import('./pages/news/news.js'),
+  },
+  {
     path: /^\/teams\/?$/,
     load: () => import('./pages/teams/teams.js'),
   },
